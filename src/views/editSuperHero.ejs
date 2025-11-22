@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Listado de Superhéroes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+</head>
+<body>
+  <div class="max-w-md mx-auto mt-10 bg-white shadow-lg rounded-lg overflow-hidden">
+    <div class="text-2xl py-4 px-6 bg-sky-500 text-white text-center font-bold uppercase">
+        Editar Superhéroe
+    </div>
+    <form class="py-4 px-6" action="/api/heroes/<%= superheroe._id/formularioEdit %>?_method=PUT" method="POST">
+        <input type="hidden" name="?_method" value="PUT">
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="nombreSuperHeroe">
+                Nombre Superheroe
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="nombreSuperHeroe" type="text"  required name="nombreSuperHeroe" value="<%= superheroes.nombreSuperHeroe %>">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2">
+                Nombre Real
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="nombreReal" type="text"  required name="nombreReal" value="<%= superheroes.nombreReal %>">
+        </div>
+        <div>
+            <label class="block text-gray-700 font-bold mb-2" for="edad">
+                Edad
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="edad" type="number"  required name="edad"value="<%= superheroes.edad %>">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="planetaOrigen">
+                Planeta de Origen
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="planetaOrigen" type="text" required name="planetaOrigen" value="<%= superheroes.planetaOrigen %>">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="debilidad">
+                Debilidad
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="debilidad" type="text" required name="debilidad" value="<%= superheroes.debilidad.join(', ') %>">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="poderes">
+                Poderes
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="poderes" type="text"  required name="poderes" value="<%= superheroes.poderes.join(', ') %>">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="aliados">
+                Aliados
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="aliados" type="text"  required name="aliados" value="<%= superheroes.aliados.join(', ') %>">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-bold mb-2" for="enemigos">
+                Enemigos
+            </label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="enemigos" type="text"  required name="enemigos" value="<%= superheroes.enemigos.join(', ') %>">
+        </div> 
+        <div class="flex items-center justify-center gap-2 mb-4">
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Guardar Cambios</button>
+            <a href="/api/heroes/vista" class="bg-gray-400 text-white px-4 py-2 rounded hover:bg-gray-500">Cancelar</a>
+        </div>
+        </div>
+            
+        </div>
+
+    </form>
+</div>
+
+</body>

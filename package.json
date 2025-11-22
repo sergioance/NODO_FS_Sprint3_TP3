@@ -1,0 +1,30 @@
+{
+  "name": "nodo_fs_sprint2_tp3",
+  "version": "1.0.0",
+  "description": "TP3",
+  "homepage": "https://github.com/sergioance/NODO_FS_Sprint2_TP2#readme",
+  "bugs": {
+    "url": "https://github.com/sergioance/NODO_FS_Sprint2_TP2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergioance/NODO_FS_Sprint2_TP2.git"
+  },
+  "license": "ISC",
+  "author": "Sergio Ance",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.mjs",
+    "dev": "nodemon app.mjs"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.16.1",
+    "nodemon": "^3.1.10"
+  }
+}
