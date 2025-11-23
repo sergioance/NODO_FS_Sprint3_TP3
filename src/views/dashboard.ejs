@@ -106,10 +106,12 @@
       </div>
     <% } %>
   </div>
-<!-- ...código anterior... -->
+
+
+<!-- Script SweetAlert2 para confirmación de eliminación  -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-  // helper para escapar HTML y evitar inyección
+  //Escapar HTML y evitar inyección
   const escapeHtml = (unsafe) => {
     return unsafe
       .replaceAll('&', '&amp;')
